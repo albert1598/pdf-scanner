@@ -1,24 +1,13 @@
-# pdf-scanner
+# PDF2TXT using Azure cognitive OCR API
 
-# PDF to Text with Python
+This script converts the PDF files in a given directory to TXT through the 
+Microsoft cognitive OCR API.
+It requires an active Azure subscription as it needs a subscription key to call their API.
 
-## Introduction
+## Installation 
 
-This program will:
+On Ubuntu create a new Python-3 virtual env and install the packages in `requirements.txt`.
 
-1. Split your PDF into pages,
-2. Extract the text from each pages, and
-3. Save them in `.txt` file.
+## Usage 
+Within the virtualenv simply run `python main.py --dirpath /path/to/dir`
 
-## Required
-- [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/) ([Why using this?](#whyme))
-- [PyPDF2]
-
-## Run
-```
-$ python main.py <your-pdf-file>
-```
-
-## <a name="whyme"></a> Why Using PDFtk?
-
-Because PyPDF2's extract function doesn't works on some files.
